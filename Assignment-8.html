@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="date" id="today">
+<input type="date" id="event">
+<button id="btn">Calculate Remaining Time</button>
+
+<div id="result"></div>
+    <script>
+        let today = document.querySelector("#today");
+let eventDate = document.querySelector("#event");
+let btn = document.querySelector("#btn");
+let result = document.querySelector("#result");
+
+btn.addEventListener("click", calculateTime);
+
+function calculateTime() {
+
+    let todayObj = new Date(today.value);
+    let eventObj = new Date(eventDate.value);
+
+    let todayMs = todayObj.getTime();
+    let eventMs = eventObj.getTime();
+
+    let difference = eventMs - todayMs;
+
+    if (difference < 0) {
+        result.innerHTML = "The event date has already passed.";
+        return;
+    }
+
+    let seconds = difference / 1000;
+    let minutes = seconds / 60;
+    let hours = minutes / 60;
+    let days = hours / 24;
+    let months = days / 30;      // Approximate
+    let years = days / 365;      // Approximate
+
+    result.innerHTML = `
+        <h3>Remaining Time</h3>
+        Milliseconds: ${difference}<br>
+        Seconds: ${seconds.toFixed(2)}<br>
+        Minutes: ${minutes.toFixed(2)}<br>
+        Hours: ${hours.toFixed(2)}<br>
+        Days: ${days.toFixed(2)}<br>
+        Months (Approx.): ${months.toFixed(2)}<br>
+        Years (Approx.): ${years.toFixed(2)}
+    `;
+}
+    </script>
+</body>
+</html>

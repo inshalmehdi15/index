@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input placeholder="Enter Number" id="en">
+    <button id="btn">Countdown</button>
+    <div id = "endiv"></div>
+</body>
+<script>
+    let en = document.querySelector("#en")
+    let btn = document.querySelector("#btn")
+    let endiv = document.querySelector("#endiv")
+
+    let countNumber = () => {
+        let numValue = en.value
+         endiv.innerHTML = ""
+        
+       
+
+        for (let x = numValue ; x >=1; x--){
+            
+            let para = "<p>" + x + "</p>"
+                endiv.innerHTML += para
+        }
+    }
+    btn.addEventListener("click" , countNumber)
+</script>
+</html>

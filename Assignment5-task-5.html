@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input placeholder="Enter Number" id = "num" />
+    <button id = "btn">Even Number</button>
+    <div id = "divn"></div>
+</body>
+<script>
+    let num = document.querySelector("#num")
+    let btn = document.querySelector("#btn")
+    let divn = document.querySelector("#divn")
+
+    let enterNumber = () => {
+      let  numValue = num.value
+      divn.innerHTML = ""
+         for ( let x = 1 ; x <= numValue ; x ++){
+          if (x%2 == 0) {
+            let para = "<p>" + x +"</p>"
+            divn.innerHTML += para
+            
+          }
+
+         }
+        
+
+    }
+    btn.addEventListener ("click",enterNumber)
+</script>
+</html>

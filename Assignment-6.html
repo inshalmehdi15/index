@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Arrays Assignment</title>
+</head>
+<body>
+
+    <h1>JavaScript Arrays Assignment</h1>
+
+    <script>
+
+        
+        // Question 1
+        
+        document.write("<h2>Question 1</h2>")
+
+        let cities = ["Karachi", "Lahore", "Islamabad", "Peshawar", "Quetta"]
+        cities.push("Multan", "Hyderabad")
+
+        document.write(cities + "<hr>")
+
+
+
+       
+        // Question 2
+       
+        document.write("<h2>Question 2</h2>")
+
+        let foods = ["Pizza", "Burger", "Biryani", "Pasta", "Fries", "Sandwich"];
+        foods.pop()
+
+        document.write(foods + "<hr>")
+
+
+
+        
+        // Question 3
+        
+        document.write("<h2>Question 3</h2>")
+
+        let colors = ["Red", "Blue", "Green", "Yellow", "Black"]
+        colors.shift()
+
+        for(let i = 0; i < colors.length; i++){
+            document.write(colors[i] + "<br>")
+        }
+
+        document.write("<hr>")
+
+
+
+       
+        // Question 4
+        
+        document.write("<h2>Question 4</h2>")
+
+        let languages = ["JavaScript", "Python", "Java", "C++", "PHP"]
+        languages.unshift("HTML", "CSS")
+
+        document.write(languages + "<hr>")
+
+
+
+        
+        // Question 5
+        
+        document.write("<h2>Question 5</h2>")
+
+        let fruits = ["Apple", "Banana", "Orange", "Mango", "Grapes", "Peach", "Kiwi", "Cherry"]
+
+        let copiedFruits = fruits.slice(2, 6)
+
+        document.write("<b>Original Array:</b><br>")
+        document.write(fruits + "<br><br>")
+
+        document.write("<b>Copied Array:</b><br>")
+        document.write(copiedFruits + "<hr>")
+
+
+
+       
+        // Question 6
+        
+        document.write("<h2>Question 6</h2>")
+
+        let animals = ["Cat", "Dog", "Elephant", "Horse", "Monkey", "Bear", "Goat"]
+
+        animals.splice(2, 0, "Lion", "Tiger")
+
+        document.write(animals + "<hr>")
+
+
+
+       
+        // Question 7
+        
+        document.write("<h2>Question 7</h2>")
+
+        let cars = ["Toyota", "Honda", "BMW", "Audi", "Suzuki", "Kia"]
+
+        cars.splice(2, 2)
+
+        document.write(cars + "<hr>")
+
+
+
+        
+        // Question 8
+        
+        document.write("<h2>Question 8</h2>")
+
+        let subjects = ["Math", "Physics", "Chemistry", "Biology", "English", "Urdu"]
+
+        subjects.splice(1, 1, "Computer Science")
+
+        document.write(subjects + "<hr>")
+
+
+
+        
+        // Question 9
+        
+        document.write("<h2>Question 9</h2>")
+
+        let students = [
+            "Ali",
+            "Sara",
+            "Usman",
+            "Ayesha",
+            "Bilal",
+            "Fatima",
+            "Hamza",
+            "Zain",
+            "Hina",
+            "Noor"
+        ]
+
+        students.push("Ahmed Raza", "Sana")
+        students.shift()
+        students.unshift("Ahmed")
+        students.pop()
+
+        for(let i = 0; i < students.length; i++){
+            document.write(students[i] + "<br>")
+        }
+
+        document.write("<hr>")
+
+
+
+        
+        // Question 10
+       
+        document.write("<h2>Question 10</h2>")
+
+        let mobiles = [
+            "Samsung",
+            "Oppo",
+            "Vivo",
+            "Realme",
+            "Nokia",
+            "Infinix",
+            "Xiaomi",
+            "Huawei"
+        ];
+
+        mobiles.push("OnePlus")
+        mobiles.shift()
+        mobiles.unshift("Apple")
+
+        let lastFour = mobiles.slice(-4)
+
+        mobiles.splice(3, 0, "Nothing")
+
+        document.write("<b>Updated Mobile Brands:</b><br>")
+
+        for(let i = 0; i < mobiles.length; i++){
+            document.write(mobiles[i] + "<br>")
+        }
+
+        document.write("<br><b>Copied Last 4 Brands:</b><br>")
+
+        for(let i = 0; i < lastFour.length; i++){
+            document.write(lastFour[i] + "<br>")
+        }
+
+        document.write("<hr>")
+
+
+
+        
+        // Bonus Challenge
+        
+        document.write("<h2>Bonus Challenge</h2>")
+
+        let numbers = [10,20,30,40,50,60,70,80,90,100]
+
+        numbers.push(100,200)
+
+        numbers.shift()
+
+        numbers.unshift(0)
+
+        let middleNumbers = numbers.slice(3,8)
+
+        numbers.splice(3,1,999)
+
+        document.write("<b>Final Array:</b><br>")
+
+        for(let i = 0; i < numbers.length; i++){
+            document.write(numbers[i] + "<br>")
+        }
+
+        document.write("<br><b>Copied Middle Array:</b><br>")
+
+        for(let i = 0; i < middleNumbers.length; i++){
+            document.write(middleNumbers[i] + "<br>")
+        }
+
+    </script>
+
+</body>
+</html>
+</body>
+</html>

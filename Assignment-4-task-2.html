@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id = "age">18</h1>
+    <button id = bd>Birthday</button>
+    <button id = "year">Go Back One Year</button>
+</body>
+<script>
+    let age = 18
+
+    let ages = document.querySelector("#age")
+    let bd = document.querySelector("#bd")
+    let year = document.querySelector("#year")
+
+    function incrementAge (){
+     birthday = age ++
+        ages.innerHTML = birthday
+    }
+
+    function decrementAge (){
+     birthday = age --
+        ages.innerHTML = birthday
+    }
+
+    bd.addEventListener("click",  incrementAge)
+    year.addEventListener("click",  decrementAge)
+    
+</script>
+</html>

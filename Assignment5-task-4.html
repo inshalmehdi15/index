@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input placeholder="Table Number" id = "num"/>
+    <input placeholder="Number of Times" id = "numoftimes"/>
+    <button id = "btn">Multiply </button>
+    <div id = "tables"></div>
+</body>
+<script>
+    let tableNumber = document.querySelector("#num")
+    let numberOfTimes = document.querySelector("#numoftimes")
+    let btn = document.querySelector("#btn")
+    let tables = document.querySelector("#tables")
+    
+    
+    
+      let renderTable = () => {
+        let tableNumbers = tableNumber.value
+        let numberOfTime = numberOfTimes.value
+         
+        tables.innerHTML = ""
+
+    
+        for (x = 1 ; x <= numberOfTime ; x++){
+          let para = "<p>" +   tableNumbers +" "  + "x" + " " +  x + " " +"=" +" " + tableNumbers * x + "</p>"
+          tables.innerHTML += para
+
+        }
+        
+    
+      }
+      btn.addEventListener("click" , renderTable)
+      
+</script>
+</html>

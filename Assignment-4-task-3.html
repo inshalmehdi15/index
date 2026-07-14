@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id = "bulb">Bulb is OFF</h1>
+    <button id = "on">Turn ON</button>
+    <button id = "off">Turn OFF</button>
+</body>
+<script>
+   let bulb = "OFF"
+
+   let bulbs = document.querySelector("#bulb")
+   let on = document.querySelector("#on")
+   let off = document.querySelector("#off")
+   
+    function turnOn (){
+       
+      let apple = "Bulb is ON";
+      bulbs.innerHTML = apple;
+   }
+
+   function turnOff (){
+      let bulb = "Bulb is OFF"
+      bulbs.innerHTML = bulb
+   }
+
+
+   on.addEventListener("click", turnOn)
+   off.addEventListener("click", turnOff)
+</script>
+</html>

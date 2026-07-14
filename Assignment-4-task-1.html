@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id = "marks" >50</h1>
+    <button id = "addBtn">Add Bonus Marks</button>
+    <button id = "deductBtn">Deduct Marks</button>
+</body>
+<script>
+    let marks = 50
+
+     let marksHeading = document.querySelector("#marks")
+     let  addBtn = document.querySelector("#addBtn")
+     let deductBtn  = document.querySelector("#deductBtn")
+
+    function  addBonusMarks(){
+       marks = marks + 5
+      marksHeading.innerHTML = marks
+
+    }
+
+    function  deductMarks(){
+     marks = marks - 5
+     marksHeading.innerHTML = marks
+    }
+    addBtn.addEventListener("click", addBonusMarks)
+    deductBtn.addEventListener("click", deductMarks)
+</script>
+</html>
