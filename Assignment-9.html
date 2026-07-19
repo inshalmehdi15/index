@@ -10,13 +10,17 @@
     <h1>Student Bio Formatter</h1>
 
     <label>Student Full Name</label><br>
-    <input type="text" id="name" placeholder="Enter Full Name"><br><br>
+    <input type="text" id="name" placeholder="Enter Full Name">
+    <br><br>
 
     <label>City</label><br>
-    <input type="text" id="city" placeholder="Enter City"><br><br>
+    <input type="text" id="city" placeholder="Enter City">
+    <br><br>
 
     <label>Short Introduction</label><br>
-    <textarea id="intro" rows="5" cols="40" placeholder="Enter Introduction"></textarea><br><br>
+    <textarea id="intro" rows="5" cols="50"
+        placeholder="Enter Introduction"></textarea>
+    <br><br>
 
     <button id="formatBtn">Format Information</button>
     <button id="checkBtn">Check Name</button>
@@ -24,9 +28,9 @@
     <hr>
 
     <div id="output"></div>
-    <div id="checkOutput"></div>
 
     <script>
+
         let formatBtn = document.getElementById("formatBtn");
         let checkBtn = document.getElementById("checkBtn");
 
@@ -65,14 +69,15 @@
             let first20 = updatedIntro.substring(0, 20);
 
             document.getElementById("output").innerHTML =
-                "<h3>Formatted Information</h3>" +
-                "<b>Clean Name:</b> " + cleanName + "<br><br>" +
-                "<b>Name Length:</b> " + nameLength + "<br><br>" +
-                "<b>First Name:</b> " + firstName + "<br><br>" +
-                "<b>Uppercase Name:</b> " + upperName + "<br><br>" +
-                "<b>City:</b> " + lowerCity + "<br><br>" +
-                "<b>Updated Introduction:</b> " + updatedIntro + "<br><br>" +
-                "<b>First 20 Characters:</b> " + first20;
+                "<h3>Result</h3>" +
+                "<p><b>Clean Name:</b> " + cleanName + "</p>" +
+                "<p><b>Name Length:</b> " + nameLength + "</p>" +
+                "<p><b>First Name:</b> " + firstName + "</p>" +
+                "<p><b>Uppercase Name:</b> " + upperName + "</p>" +
+                "<p><b>City:</b> " + lowerCity + "</p>" +
+                "<p><b>Updated Introduction:</b> " + updatedIntro + "</p>" +
+                "<p><b>First 20 Characters:</b> " + first20 + "</p>";
+
         });
 
         checkBtn.addEventListener("click", function () {
@@ -80,14 +85,13 @@
             let name = document.getElementById("name").value.trim();
 
             if (name.indexOf("Bilal") != -1) {
-                document.getElementById("checkOutput").innerHTML =
-                    "<h3>Bilal is present in the name.</h3>";
+                alert("Bilal is present in the name.");
             } else {
-                document.getElementById("checkOutput").innerHTML =
-                    "<h3>Bilal is not present.</h3>";
+                alert("Bilal is not present.");
             }
 
         });
+
     </script>
 
 </body>
